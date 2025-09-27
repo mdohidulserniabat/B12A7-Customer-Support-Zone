@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1001,
+    "title": "Login Issue",
+    "description": "User unable to log in with valid credentials.",
+    "customer": "Alice Johnson",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2025-09-01T09:15:00Z"
+  },
+  {
+    "id": 1002,
+    "title": "Payment Failure",
+    "description": "Transaction not going through despite valid card.",
+    "customer": "Bob Smith",
+    "priority": "Critical",
+    "status": "In Progress",
+    "createdAt": "2025-09-02T11:30:00Z"
+  },
+  {
+    "id": 1003,
+    "title": "Broken Link",
+    "description": "Checkout page link is broken.",
+    "customer": "Charlie Davis",
+    "priority": "Medium",
+    "status": "Resolved",
+    "createdAt": "2025-09-03T08:00:00Z"
+  },
+  {
+    "id": 1004,
+    "title": "Slow Website",
+    "description": "Home page takes too long to load.",
+    "customer": "Diana Lee",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2025-09-04T10:20:00Z"
+  },
+  {
+    "id": 1005,
+    "title": "Forgot Password Error",
+    "description": "Reset password email not being sent.",
+    "customer": "Ethan Brown",
+    "priority": "Medium",
+    "status": "In Progress",
+    "createdAt": "2025-09-05T14:10:00Z"
+  },
+  {
+    "id": 1006,
+    "title": "UI Bug on Dashboard",
+    "description": "Graph not displaying correctly on smaller screens.",
+    "customer": "Fiona Clark",
+    "priority": "Low",
+    "status": "Open",
+    "createdAt": "2025-09-06T07:45:00Z"
+  },
+  {
+    "id": 1007,
+    "title": "App Crash",
+    "description": "Mobile app crashes on startup for Android 14.",
+    "customer": "George Miller",
+    "priority": "Critical",
+    "status": "Open",
+    "createdAt": "2025-09-07T16:00:00Z"
+  },
+  {
+    "id": 1008,
+    "title": "Email Notifications Not Working",
+    "description": "Users not receiving confirmation emails.",
+    "customer": "Hannah Wilson",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "2025-09-08T09:40:00Z"
+  },
+  {
+    "id": 1009,
+    "title": "Search Feature Broken",
+    "description": "Search returns no results even for valid queries.",
+    "customer": "Ian Martinez",
+    "priority": "Medium",
+    "status": "Resolved",
+    "createdAt": "2025-09-09T12:25:00Z"
+  },
+  {
+    "id": 1010,
+    "title": "Data Sync Issue",
+    "description": "User data not syncing across devices.",
+    "customer": "Julia Thompson",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2025-09-10T18:30:00Z"
+  },
+  {
+    "id": 1011,
+    "title": "Invalid Coupon",
+    "description": "Discount coupon shows invalid even when active.",
+    "customer": "Kevin Anderson",
+    "priority": "Low",
+    "status": "Open",
+    "createdAt": "2025-09-11T15:15:00Z"
+  },
+  {
+    "id": 1012,
+    "title": "Security Warning",
+    "description": "Browser shows 'Not Secure' warning on login page.",
+    "customer": "Laura Scott",
+    "priority": "Critical",
+    "status": "In Progress",
+    "createdAt": "2025-09-12T20:00:00Z"
+  },
+  {
+    "id": 1013,
+    "title": "Language Translation Error",
+    "description": "Some words not translated on the French site.",
+    "customer": "Michael Perez",
+    "priority": "Low",
+    "status": "Resolved",
+    "createdAt": "2025-09-13T06:50:00Z"
+  },
+  {
+    "id": 1014,
+    "title": "File Upload Failure",
+    "description": "Large files fail to upload with timeout error.",
+    "customer": "Nina Roberts",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2025-09-14T19:35:00Z"
+  }
+]
