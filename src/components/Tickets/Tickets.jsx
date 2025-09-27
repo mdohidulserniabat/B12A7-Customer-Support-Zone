@@ -6,6 +6,11 @@ import { toast } from 'react-toastify';
 const Tickets = ({ ticketsPromise, setCount, setResolvedCount }) => {
   const data = use(ticketsPromise);
   const [tasks, setTasks] = useState([]);
+  const [resolvedTasks, setResolvedTasks] = useState([]);
+
+  const availableTickets = data.filter(
+    ticket => !resolvedTasks.some(resolved => resolved.id === ticket.id) // <---
+  );
 
   const handleClick = ticket => {
     if (!tasks.find(t => t.id === ticket.id)) {
@@ -16,11 +21,19 @@ const Tickets = ({ ticketsPromise, setCount, setResolvedCount }) => {
       toast.error('Ticket already in Task Status');
     }
   };
+
   const handleResolve = ticketId => {
-    setTasks(prev => prev.filter(t => t.id !== ticketId));
-    toast.success('Ticket resolved!');
-    setCount(prev => prev - 1);
-    setResolvedCount(prev => prev + 1);
+    const taskToResolve = tasks.find(t => t.id === ticketId);
+
+    if (taskToResolve) {
+      setTasks(prev => prev.filter(t => t.id !== ticketId));
+
+      setResolvedTasks(prev => [...prev, taskToResolve]);
+
+      toast.success('Ticket resolved!');
+      setCount(prev => prev - 1);
+      setResolvedCount(prev => prev + 1);
+    }
   };
 
   return (
@@ -30,7 +43,7 @@ const Tickets = ({ ticketsPromise, setCount, setResolvedCount }) => {
           Customer Tickets
         </h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-6 px-4">
-          {data.map(ticket => (
+          {availableTickets.map(ticket => (
             <div
               key={ticket.id}
               onClick={() => handleClick(ticket)}
@@ -96,7 +109,17 @@ const Tickets = ({ ticketsPromise, setCount, setResolvedCount }) => {
           ))}
         </div>
         <h1 className="text-xl font-semibold">Resolved Task</h1>
-        <p>No resolved tasks yet.</p>
+        {resolvedTasks.length === 0 && <p>No resolved tasks yet.</p>}
+        {resolvedTasks.map(resolvedTask => (
+          <div
+            key={resolvedTask.id}
+            className="flex flex-col justify-between items-center p-3 mt-4 bg-[#E0E7FF] rounded shadow border-l-4 border-green-600"
+          >
+            <span className="font-medium text-center text-green-800">
+              {resolvedTask.title}
+            </span>
+          </div>
+        ))}
       </div>
     </div>
   );
