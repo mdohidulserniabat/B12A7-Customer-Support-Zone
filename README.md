@@ -1,16 +1,49 @@
-# React + Vite
+# What is JSX, and why is it used?
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Answer: Jsx which stans for Javascript . it allows decelopers to write Html
+directly within their Javascript code.primarily used with libraries like React
+for building user interfaces. #What is the difference between State and Props?
+Answer: Props are like stuff a component gets from outside — you can think of
+them as inputs. The component can use them but can’t change them.
 
-Currently, two official plugins are available:
+State is what the component keeps inside itself. It can change over time and
+when it does, the component updates what you see.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Props = given data (can’t change) State = own data (can change) #What is the
+useState hook, and how does it work?
 
-## React Compiler
+Answer: The useState hook is a way to add state to a React function component.
+Before hooks, only class components could have state, but with useState,
+function components can keep track of data that changes.
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+When you use useState, you start by giving it an initial value. It then gives
+you two things:
 
-## Expanding the ESLint configuration
+The current state value.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+A function to update that state.
+
+When you call the update function, React remembers the new value and
+automatically re-renders the component with the updated state.
+
+#How can you share state between components in React?
+
+Answer: In React, state lives inside a component, so it’s private by default. To
+share state between components, you usually lift the state up to their closest
+common parent.
+
+This means you move the state into a parent component, then pass the state down
+as props to the child components that need it. If those children need to update
+the state, you pass down a function from the parent that changes the state.
+
+# How is event handling done in React?
+
+Answer: In React, event handling works a bit like regular HTML, but with some
+differences:
+
+You write event handlers as functions inside your component.
+
+Instead of lowercase event names like onclick, React uses camelCase like
+onClick.
+
+You pass the function directly, not as a string.

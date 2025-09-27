@@ -6,6 +6,7 @@ import './App.css';
 import Banner from './components/Banner/Banner';
 import Navbar from './components/Navbar/Navbar';
 import Tickets from './components/Tickets/Tickets';
+import Footer from './components/Footer/Footer';
 const fetchData = async () => {
   const res = await fetch('tickets.json');
   return res.json();
@@ -27,6 +28,7 @@ function App() {
           setResolvedCount={setResolvedCount}
         ></Tickets>
       </Suspense>
+      <Footer></Footer>
       <ToastContainer />
     </>
   );
